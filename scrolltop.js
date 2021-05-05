@@ -1,16 +1,19 @@
 $('input').focus(function() {
-  	var ele = $(this);
-    $('html, body').animate({
-        scrollTop: ele.offset().top - 180
-    }, 800);
-});
-
- $('input').focus(function() {
     var field_focus = $(this);
-    var field_focus_height= $(this).outerHeight()
-    if((field_focus.offset().top + field_focus_height)>250){
+    var value_footer_window = $(window).height() - 120
+    var field_focus_height= $(this).outerHeight(true)
+    if((field_focus.offset().top + field_focus_height)>value_footer_window){
         $('html, body').animate({
-            scrollTop: field_focus.offset().top - field_focus_height
+            scrollTop: field_focus.offset().top - 90
+        }, 500);
+    }
+});
+$('textarea').focus(function(){
+    var field_focus = $(this);
+    var field_focus_height= field_focus.outerHeight(true)
+    if((field_focus.offset().top+field_focus_height)>$(window).height()-120){
+        $('html, body').animate({
+            scrollTop: field_focus.offset().top
         }, 500);
     }
 });
