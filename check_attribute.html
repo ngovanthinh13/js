@@ -1,0 +1,18 @@
+<---hasAttribute() in javascript-->
+
+<button id="idBtn" onclick="fun_name()">Check Me for attributes</button>
+
+<script>
+function fun_name()
+{
+  var elem = document.getElementById("idBtn");
+  if (elem.hasAttribute("id"))
+  {
+    alert("Given attribute is present");
+  }
+  else
+  {
+    alert("Given attribute is not present");
+  }
+}
+</script>
