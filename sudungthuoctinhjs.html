@@ -1,0 +1,19 @@
+<input type="text" name="product_nums" init-value="20" value="20"/>
+<-- giữ lại giá trị hợp lệ với thuộc tính init-value -->
+
+<script>
+function validate(obj){
+    var value = parseInt(obj.value);
+     
+    // Nếu nhập giá trị bé hơn 0
+    // thì thông báo lỗi và backup lại giá trị ban đầu
+    if (value < 0){
+        var init_value = obj.getAttribute('init-value');
+        obj.value = init_value;
+    }
+    else {
+        // Ngược lại nhập đúng thì 
+        // Cập nhật giá trị backup
+        obj.setAttribute('init-value', value);    }
+}
+</script>
