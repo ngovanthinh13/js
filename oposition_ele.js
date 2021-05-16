@@ -13,3 +13,4 @@ l.getBoundingClientRect()
 //x: -20
 //y: 272.8000183105469
 //__proto__: DOMRect
+// querySelector không sử dụng được .getBoundingClientRect()
