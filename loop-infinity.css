@@ -1,0 +1,13 @@
+*{
+	margin:0;
+	padding:0;
+}
+@keyframes ani{
+	0%{background-position: 100vw 0;}
+	100%{background-position: 0 0;}
+}
+div{
+	background:url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTQfG9vUXOov5AvJFL68vVwdNyNsKEZQcj9jh9ngfPwtBepik90) repeat-x 0 / 100% auto;
+	height:500px; /* this value is not important, just not zero */
+	animation: ani 10s linear infinite ;
+}
