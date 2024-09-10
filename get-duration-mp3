@@ -1,0 +1,30 @@
+// Step 1: We need AudioContext instance to decode audio files.
+var context = new AudioContext();
+
+
+// Step 2: Download a .mp3 file using AJAX
+var request = new XMLHttpRequest();
+request.addEventListener('load', fileLoaded);
+request.open('GET', 'https://www.onlinemictest.com/wp-content/themes/onlinemictest/sound.mp3');
+request.responseType = 'arraybuffer';
+request.send();
+
+console.log('13')
+
+
+// Step 3: File downloaded, need to be decoded now.
+function fileLoaded() {
+  console.log('2')
+    if (request.status < 400)
+        context.decodeAudioData(request.response, fileDecoded);
+}
+
+
+// Step 4: File decoded, we can get the duration.
+function fileDecoded(audioBuffer) {
+console.log('1')
+    // This is the duration you want, in seconds:
+    audioBuffer.duration;
+  console.log(audioBuffer.duration)
+
+}
